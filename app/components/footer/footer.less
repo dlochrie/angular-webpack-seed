@@ -1,0 +1,16 @@
+[footer] {
+  background-color: #eee;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+
+  // Configure the height based on whether we are viewing in the "mobile" or
+  // "desktop" mode. Another mode is also added for middle range (tablet/ipad).
+  height: @footer-height-mobile;
+  @media (min-width: @screen-sm-min) {
+    height: @footer-height-tablet;
+  }
+  @media (min-width: @screen-md-min) {
+    height: @footer-height-desktop;
+  }
+}

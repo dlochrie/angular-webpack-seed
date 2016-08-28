@@ -1,0 +1,8 @@
+<a ng-if="match.model.type && match.model.type === 'page'">
+  <span class="icon-link"></span> BRAND NAME HERE &dash;
+  <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+</a>
+<a ng-if="!match.model.type || match.model.type !== 'page'">
+  <span class="icon-play_hover"></span>
+  <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+</a>

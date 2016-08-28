@@ -1,0 +1,40 @@
+@message-transition-duration: .5s;
+
+[messages] {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 5;
+
+  .alert {
+    font-weight: bold;
+  }
+
+  .alert-success {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #337ab7;
+  }
+
+  .message-wrapper.ng-enter,
+  .message-wrapper.ng-leave {
+    -webkit-transition: @message-transition-duration linear all;
+    -moz-transition: @message-transition-duration linear all;
+    -ms-transition: @message-transition-duration linear all;
+    -o-transition: @message-transition-duration linear all;
+    transition: @message-transition-duration linear all;
+  }
+
+  .message-wrapper.ng-enter {
+    opacity: 1;
+  }
+
+  .message-wrapper.ng-leave {
+    opacity: 0;
+  }
+
+  .alert {
+    opacity: .9;
+    margin: 0 20px;
+  }
+}

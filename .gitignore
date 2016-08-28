@@ -1,0 +1,7 @@
+node_modules
+build
+public/css
+public/js
+public/index.html
+app/template-cache.js
+app/common/translations.js

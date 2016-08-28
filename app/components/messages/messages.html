@@ -1,0 +1,13 @@
+<div class="message-wrapper" ng-if="!!messagesCtrl.current">
+  <div class="container" ng-switch="messagesCtrl.current.type">
+    <div ng-switch-when="error" class="alert alert-danger">
+      <p>{{ messagesCtrl.current.message }}</p>
+    </div>
+    <div ng-switch-when="info" class="alert alert-info">
+      <p>{{ messagesCtrl.current.message }}</p>
+    </div>
+    <div ng-switch-when="success" class="alert alert-success">
+      <p>{{ messagesCtrl.current.message }}</p>
+    </div>
+  </div>
+</div>

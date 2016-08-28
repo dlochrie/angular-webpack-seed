@@ -1,0 +1,26 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  // Configure the bottom padding based on whether we are viewing in the
+  // "mobile", "tablet" or "desktop" mode. The margin here is to support the
+  // sticky footer.
+  margin-bottom: @footer-height-mobile + @footer-margin;
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: @footer-height-tablet + @footer-margin;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-bottom: @footer-height-desktop + @footer-margin;
+  }
+}
+
+body > .container {
+  padding-top: @navbar-height;
+}
+
+// The dropdown menu should float on top of other elements.
+ul.dropdown-menu {
+  z-index: 2000;
+}

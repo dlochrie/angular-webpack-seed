@@ -1,0 +1,12 @@
+<form class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+    <input type="text"
+        class="form-control search-box"
+        placeholder="{{ 'SEARCH' | translate }}"
+        ng-model="searchCtrl.selected"
+        uib-typeahead="result as result.name for result in searchCtrl.search($viewValue)"
+        typeahead-append-to-body="true"
+        typeahead-on-select="searchCtrl.navigate($item, $model, $label, $event)"
+        typeahead-template-url="components/search/partials/results.html">
+  </div>
+</form>

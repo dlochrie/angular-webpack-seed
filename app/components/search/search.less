@@ -1,0 +1,45 @@
+[search] {
+  form {
+    position: relative;
+  }
+
+  form,
+  .form-control.search-box {
+    width: 100%;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    form,
+    .form-control.search-box {
+      width: auto;
+    }
+  }
+
+  form:before {
+    color: #ccc;
+    content: '\e8bd';
+    font-family: awesomeness;
+    left: 10px;
+    position: absolute;
+    top: 5px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .navbar-form {
+    padding: 0;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .navbar-form {
+      margin-right: 20px;
+    }
+  }
+
+  .search-box {
+    background-color: #eee;
+    padding: 0 0 0 30px;
+  }
+}
