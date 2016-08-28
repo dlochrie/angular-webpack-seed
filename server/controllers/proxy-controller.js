@@ -10,12 +10,5 @@
  * @param {!http.ServerResponse} res The Node.js server response object.
  */
 exports.handleClientGetRequest = function(req, res) {
-  var app = req.app,
-      viewLocals = app.get('viewLocals');
-
-  if (viewLocals) {
-    res.render('layout', viewLocals);
-  } else {
-    res.status(400);
-  }
+  res.render('layout');
 };
